@@ -7,13 +7,12 @@ set -e
 npm run build
 
 # navigate into the build output directory
-cd src/.vuepress/dist
+cd dist
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
 
 git init
-git remote add origin https://github.com/minhducctchv/vuepress-docs-dl.git
 git add -A
 git commit -m 'deploy'
 
@@ -21,6 +20,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:minhducctchv/vuepress-docs-dl.git master:gh-pages
+git push -f https://github.com/minhducctchv/vuepress-docs.git master:gh-pages
 
 cd -

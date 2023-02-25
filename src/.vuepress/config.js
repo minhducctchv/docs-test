@@ -1,7 +1,9 @@
 const { description } = require('../../package')
 
 module.exports = {
-  base: 'vuepress-docs-dl',
+  base: '/vuepress-docs/',
+  /* thư mục output build, root là docs */
+  dest: 'dist',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */

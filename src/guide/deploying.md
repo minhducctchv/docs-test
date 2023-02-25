@@ -2,15 +2,24 @@
 
 Tình trạng:
 
-- tài liệu đang đặt trong thư mục `docs`
-- vị trí build là `.vuepress/dist`
+- con trỏ terminal đang ở `docs` _(thư mục to nhất project)_
+- vị trí build là `docs/dist`
 - lệnh build trong `package.json` là 
 
 ``` json
 {
   "scripts": {
-    "docs:build": "vuepress build docs"
+    "build": "vuepress build src"
   }
+}
+```
+- trong file `config.js`
+
+```js
+module.exports = {
+   base: '/ten-repo/',
+   /* thư mục output build, root là docs */
+   dest: 'dist'
 }
 ```
 
@@ -31,10 +40,10 @@ Tình trạng:
 set -e
 
 # build
-npm run docs:build
+npm run build
 
 # navigate into the build output directory
-cd docs/.vuepress/dist
+cd dist
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
@@ -47,7 +56,8 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+# git push -f https://github.com/<USERNAME>/<REPO>.git master:gh-pages
+git push -f https://github.com/minhducctchv/vuepress-docs.git master:gh-pages
 
 cd -
 ```
