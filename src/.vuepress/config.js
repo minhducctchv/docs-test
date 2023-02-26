@@ -61,7 +61,10 @@ module.exports = {
             'directory-structure',
             'configuration',
             'asset-handling',
+            'markdown',
             'deploying',
+            'using-vue-in-markdown',
+            'internationalization',
             'TestPro/test_pro',
           ]
         },
